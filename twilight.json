@@ -34,13 +34,15 @@
             "format": "switch",
             "required": false,
             "value": false,
-            "selected": false
+            "selected": true,
+            "public": true
         },
         {
             "type": "boolean",
             "id": "is_more_button_enabled",
             "label": "عرض (زر الكل) في الصفحة الرئيسية",
-            "format": "switch"
+            "format": "switch",
+            "selected": true
         },
         {
             "type": "static",
@@ -55,15 +57,16 @@
             "variant": "h6"
         },
         {
-            "id": "header_is_sticky",
-            "label": "تثبت القائمة الرئيسية أعلى الصفحة عند التمرير لأسفل",
+            "id": "تثبت_القائمة_الرئيسية_أعلى_الصفحة_عند_التمرير_لأسفل_copy",
+            "label": "تثبت القائمة الرئيسية أعلى الصفحة عند التمرير لأسفل copy",
             "description": "يُنصح بالغاء تفعيلها في حالة وجود عناصر كثيرة في القائمة المنسدلة",
             "type": "boolean",
             "icon": "sicon-toggle-off",
             "format": "switch",
             "required": false,
             "value": true,
-            "selected": true
+            "selected": true,
+            "public": true
         },
         {
             "type": "boolean",
@@ -74,7 +77,8 @@
             "format": "switch",
             "required": false,
             "value": true,
-            "selected": true
+            "selected": true,
+            "public": true
         },
         {
             "type": "boolean",
@@ -85,7 +89,8 @@
             "format": "switch",
             "required": false,
             "value": true,
-            "selected": true
+            "selected": true,
+            "public": true
         },
         {
             "type": "static",
@@ -108,7 +113,8 @@
             "format": "switch",
             "required": false,
             "value": true,
-            "selected": false
+            "selected": true,
+            "public": true
         },
         {
             "type": "static",
@@ -131,7 +137,8 @@
             "format": "switch",
             "required": false,
             "value": true,
-            "selected": true
+            "selected": true,
+            "public": true
         },
         {
             "type": "boolean",
@@ -142,7 +149,8 @@
             "format": "switch",
             "required": false,
             "value": true,
-            "selected": true
+            "selected": true,
+            "public": true
         },
         {
             "id": "slider_background_size",
@@ -157,6 +165,11 @@
                     "label": "اظهار الصورة كاملةً في المنتصف (Contain)",
                     "value": "contain",
                     "key": "f4adec13-6e4c-433b-b141-b2807935ced9"
+                },
+                {
+                    "label": "تغطية الصورة كامل المساحة مع المحافظة على النسبة الصورة (Cover)",
+                    "value": "cover",
+                    "key": "e9c8ea8f-c5c6-438e-9d45-3bce269afde4"
                 }
             ],
             "options": [
@@ -172,7 +185,9 @@
                 }
             ],
             "source": "Manual",
-            "required": true
+            "required": true,
+            "multichoice": true,
+            "searchable": true
         },
         {
             "type": "boolean",
@@ -183,7 +198,62 @@
             "format": "switch",
             "required": false,
             "value": false,
-            "selected": true
+            "selected": true,
+            "public": true
+        },
+        {
+            "id": "slider",
+            "type": "number",
+            "format": "slider",
+            "inputType": "range",
+            "label": "Slider",
+            "description": null,
+            "labelHTML": null,
+            "icon": "sicon-pin",
+            "value": 0,
+            "required": false,
+            "step": 2.5,
+            "minimum": -50,
+            "maximum": 50
+        },
+        {
+            "id": "email",
+            "type": "string",
+            "format": "email",
+            "inputType": "email",
+            "label": "Email",
+            "description": null,
+            "labelHTML": null,
+            "placeholder": "e.g. example@gmail.com",
+            "icon": "sicon-at",
+            "value": null,
+            "required": false,
+            "minLength": 6,
+            "maxLength": 30
+        },
+        {
+            "id": "password",
+            "type": "string",
+            "format": "password",
+            "label": "Password",
+            "description": null,
+            "labelHTML": null,
+            "placeholder": "Hidden text ..",
+            "icon": "sicon-key",
+            "value": null,
+            "hide": true,
+            "required": false,
+            "minLength": 6,
+            "maxLength": 30
+        },
+        {
+            "id": "title",
+            "type": "static",
+            "format": "title",
+            "label": "Title",
+            "value": null,
+            "variant": "h1",
+            "icon": "sicon-format-text"
         }
     ],
     "components": [
