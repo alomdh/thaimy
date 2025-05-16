@@ -34,13 +34,15 @@
             "format": "switch",
             "required": false,
             "value": false,
-            "selected": false
+            "selected": true,
+            "public": true
         },
         {
             "type": "boolean",
             "id": "is_more_button_enabled",
             "label": "عرض (زر الكل) في الصفحة الرئيسية",
-            "format": "switch"
+            "format": "switch",
+            "selected": true
         },
         {
             "type": "static",
@@ -63,7 +65,8 @@
             "format": "switch",
             "required": false,
             "value": true,
-            "selected": true
+            "selected": true,
+            "public": true
         },
         {
             "type": "boolean",
@@ -74,7 +77,8 @@
             "format": "switch",
             "required": false,
             "value": true,
-            "selected": false
+            "selected": true,
+            "public": true
         },
         {
             "type": "boolean",
@@ -85,7 +89,8 @@
             "format": "switch",
             "required": false,
             "value": true,
-            "selected": true
+            "selected": true,
+            "public": true
         },
         {
             "type": "static",
@@ -108,7 +113,8 @@
             "format": "switch",
             "required": false,
             "value": true,
-            "selected": false
+            "selected": true,
+            "public": true
         },
         {
             "type": "static",
@@ -129,9 +135,10 @@
             "description": null,
             "id": "sticky_add_to_cart",
             "format": "switch",
-            "required": false,
+            "required": true,
             "value": true,
-            "selected": true
+            "selected": true,
+            "public": true
         },
         {
             "type": "boolean",
@@ -142,7 +149,8 @@
             "format": "switch",
             "required": false,
             "value": true,
-            "selected": true
+            "selected": true,
+            "public": true
         },
         {
             "id": "slider_background_size",
@@ -157,6 +165,11 @@
                     "label": "اظهار الصورة كاملةً في المنتصف (Contain)",
                     "value": "contain",
                     "key": "f4adec13-6e4c-433b-b141-b2807935ced9"
+                },
+                {
+                    "label": "تغطية الصورة كامل المساحة مع المحافظة على النسبة الصورة (Cover)",
+                    "value": "cover",
+                    "key": "e9c8ea8f-c5c6-438e-9d45-3bce269afde4"
                 }
             ],
             "options": [
@@ -172,7 +185,10 @@
                 }
             ],
             "source": "Manual",
-            "required": true
+            "required": true,
+            "public": true,
+            "searchable": true,
+            "multichoice": true
         },
         {
             "type": "boolean",
@@ -183,7 +199,39 @@
             "format": "switch",
             "required": false,
             "value": false,
-            "selected": false
+            "selected": true,
+            "public": true
+        },
+        {
+            "id": "number",
+            "type": "number",
+            "format": "float",
+            "inputType": "number",
+            "label": "Number",
+            "description": null,
+            "labelHTML": null,
+            "placeholder": "Input a number between -10.10 and 100.",
+            "icon": "sicon-hashtag",
+            "value": null,
+            "required": false,
+            "step": 0.1,
+            "minimum": -10.1,
+            "maximum": 100
+        },
+        {
+            "id": "units",
+            "type": "number",
+            "format": "units",
+            "label": "Units",
+            "description": null,
+            "labelHTML": null,
+            "placeholder": "Insert value",
+            "icon": "sicon-percentage",
+            "value": null,
+            "required": false,
+            "unit": "%",
+            "minimum": 0,
+            "maximum": 100
         }
     ],
     "components": [
